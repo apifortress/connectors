@@ -7,7 +7,8 @@ Slack Webhook
 Connector for Slack, will post messages to a channel when a failure occurs. Create a webhook at https://[your_company].slack.com/apps/A0F7XDUAZ-incoming-webhooks
 
 ## Mode
-Event
+* Mode: **Event**
+* Run On Successful events: **False**
 
 ## Param 1
 * **Name** : hook
@@ -16,3 +17,8 @@ Event
 ## Param 2
 * **Name** : username
 * **Description** : The user name ApiFortress will have in the chat
+
+##Code
+* Finished: **True**
+* Open: **True**
+
