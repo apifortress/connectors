@@ -18,7 +18,7 @@ Connector for Slack, will post messages to a channel when a failure occurs. Crea
 * **Name** : username
 * **Description** : The user name ApiFortress will have in the chat
 
-##Code
+## Code
 * Finished: **True**
 * Open: **True**
 
