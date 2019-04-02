@@ -7,10 +7,8 @@ BigPanda
 BigPanda.io alerts and incidents
 
 ## Mode
-Event
-
-## Run On Successful events
-True
+* Mode: **Event**
+* Run On Successful events: **True**
 
 ## Param 1
 * **Name** : authorization
@@ -19,3 +17,7 @@ True
 ## Param 2
 * **Name** : appkey
 * **Description** : The provided app key
+
+##Code
+* Finished: **True**
+* Open: **True**
