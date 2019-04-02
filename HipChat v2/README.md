@@ -7,7 +7,8 @@ HipChat v2
 Sends failure alerts to Hipchat - V2 API
 
 ## Mode
-Event
+* Mode: **Event**
+* Run On Successful events: **False**
 
 ## Param 1
 * **Name** : token
@@ -16,3 +17,9 @@ Event
 ## Param 2
 * **Name** : roomId
 * **Description** : The Room id. It can be retrieved in the room details page, API ID
+
+##Code
+* Finished: **True**
+* Open: **True**
+
+
