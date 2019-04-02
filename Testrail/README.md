@@ -26,6 +26,6 @@ This connector pushes test status to TestRail
 * **Name** : domain
 * **Description** : The unique portion of your Testrail URL. (The part that comes after https://)  
 
-##Code
+## Code
 * Finished: **True**
 * Open: **True**
