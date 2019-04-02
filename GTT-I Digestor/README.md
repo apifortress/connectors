@@ -18,6 +18,6 @@ GTT-I Digestor
 * **Name** : Alert_Group
 * **Description** : The alert group property
 
-##Code
+## Code
 * Finished: **True**
 * Open: **False**
