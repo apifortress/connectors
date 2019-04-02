@@ -22,7 +22,7 @@ Elasticsearch beta
 * **Name** : baseUrl
 * **Description** : the url to the Elasticsearch engine
 
-##Code
+## Code
 * Finished: **True**
 * Open: **False**
 
