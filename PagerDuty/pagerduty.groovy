@@ -19,6 +19,20 @@ public class PagerDuty extends AFConnectorWrapper{
         final String dedupe = params['dedup_key'] //optional: key to match response with
         final String link = 'https://mastiff.apifortress.com/app/web/events/details/'+message.eventId+'?cid='+message.companyId
 
+        final String[] tags = message.tags
+
+        if (tags.contains("critical")) {
+            severity = "critical"
+        }else if (tags.contains("error")) {
+            severity = "error"
+        }else if (tags.contains("warning")) {
+            severity = "warning"
+        }else if (tags.contains("info")) {
+            severity = "info"
+        }else {
+            severity = params['severity']
+        }
+
         def pb = [
                 'payload': [
                         'summary': summary,
@@ -30,7 +44,7 @@ public class PagerDuty extends AFConnectorWrapper{
                 'dedup_key': dedupe,
                 'links': [[
                   'href': link,
-                  'text': 'Review the event here'
+                  'text': 'Review the event here on API Fortress'
                 ]],
                 'event_action': action
         ]
@@ -38,6 +52,7 @@ public class PagerDuty extends AFConnectorWrapper{
         final String data = JsonOutput.toJson(pb)
 
         final HTTPBuilder http = new HTTPBuilder(url)
+        http.ignoreSSLIssues()
         http.request(POST,JSON){
             body = data
             response.success = { resp ->
