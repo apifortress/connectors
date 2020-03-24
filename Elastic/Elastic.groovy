@@ -21,13 +21,23 @@ public class ElasticSearch extends AFConnectorWrapper{
          * The text that is going to be displayed
          */
 		message._date = new Date(message.getLong('date'))
-		final String text = JsonOutput.toJson(message)
 		/*
          * The username
          */
-		final String index = params['index'] ?: String.valueOf(message.companyId)
+		final String index = params['index'] ?: String.valueOf(message.projectName.toLowerCase())
 
-		final String type = params['type'] ?: 'failure'
+		final String type = params['type'] ?: 'event'
+
+		final String eventtype = ""
+
+		if (message.failuresCount == 0) {
+			eventtype = 'success'
+		} else {
+			eventtype = 'failure'
+		}
+
+		message.eventType = eventtype
+		final String text = JsonOutput.toJson(message)
 
 		final String username = params['username']
 
