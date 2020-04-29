@@ -5,7 +5,7 @@ import groovyx.net.http.HTTPBuilder
 
 import com.apipulse.afconnector.AFConnectorWrapper
 
-public class Twilio extends AFConnectorWrapper{
+public class Xmatters extends AFConnectorWrapper{
 
     public void run(){
 
